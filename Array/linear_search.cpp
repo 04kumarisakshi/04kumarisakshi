@@ -9,22 +9,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int liner(int arr[] ,int n,int m)
-{
-int i;
-   for(i=0;i<n;i++){
-        if(arr[i]==m)
-        {
-            return i;
-        }
+// int liner(int arr[] ,int n,int m)
+// {
+// int i;
+//    for(i=0;i<n;i++){
+//         if(arr[i]==m)
+//         {
+//             return i;
+//         }
         
         
-    }
-    return -1;
-}
+//     }
+//     return -1;
+// }
 
-int main(){
+// int main(){
+//     int n,i,m;
+//     cout<<"Enter the size of array: ";
+//     cin>>n;
+//     int arr[n];
+//     cout<<"Enter the element of array:\n";
+//     for( i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+   
+//        cout<<"Enter the element:";
+//         cin>>m;
+//         int val= liner(arr,n,m);
+//         cout<<"position of element:"<<val;
+   
+
+// }
+
+
+// without using frntion
+
+ int main(){
     int n,i,m;
+    int flag=0;
     cout<<"Enter the size of array: ";
     cin>>n;
     int arr[n];
@@ -34,9 +56,22 @@ int main(){
     }
    
        cout<<"Enter the element:";
-       cin>>m;
-   int val= liner(arr,n,m);
-    cout<<"position of element:"<<val;
-   
-
+        cin>>m;
+     for( i=0;i<n;i++){
+        if(arr[i]==m)
+        {
+           flag=1;
+           break;
+        }
+        else {
+           flag=0;
+        }
+      }
+    if(flag==1)
+         {
+            cout<<i;
+         }
+         else{
+            cout<<-1;
+         }
 }
